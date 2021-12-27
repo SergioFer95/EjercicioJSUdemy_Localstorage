@@ -1,13 +1,19 @@
 'use strict';
 
-window.addEventListener("load", () => {
+window.addEventListener("load", () =>{
 
     var form = document.querySelector('[customName="formOne"]');
 
-    form.addEventListener("submit", () => {
-    
-        var userFilms = document.querySelector('[customName="inputText"]').value;
-        localStorage.setItem("Films", userFilms);
+    var userFilm = document.querySelector("#films").value;
+
+
+    form.addEventListener("submit", ()=>{
+
+        localStorage.setItem(userFilm, userFilm);
+        console.log(userFilm);
     })
+     
 });
+    
+
 
